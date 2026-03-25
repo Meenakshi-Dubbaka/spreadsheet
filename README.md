@@ -1,16 +1,33 @@
-# React + Vite
+# Spreadsheet Grid (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple spreadsheet-like web app built using React.  
+It supports basic features like formulas, sorting, copy-paste, and saving data locally.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Column sorting (ascending, descending, reset)
+- Basic formula support (example: =A1*2)
+- Multi-cell paste from Excel / Google Sheets
+- Copy cell values
+- Undo functionality
+- Data persistence using localStorage (auto-save)
 
-## React Compiler
+## How it works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Each cell stores both value and formula
+- Formulas are parsed and evaluated when entered
+- Sorting is applied only to the view (data stays intact)
+- Clipboard handles tab-separated values for multi-cell paste
+- Data is saved automatically with a small delay
 
-## Expanding the ESLint configuration
+## Tech Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- JavaScript
+- LocalStorage
+
+## Run Locally
+
+npm install  
+npm run dev  
+
